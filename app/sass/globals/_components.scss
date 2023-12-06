@@ -1,0 +1,44 @@
+/* accordion styles*/
+.accordion {
+    width: 30rem;
+    padding: 20px;
+}
+summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    font-weight: var(--fw-semibold);
+    color: var(--clr-purple);
+  }
+  /* to display properly on iPhone */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary:hover, summary:active, summary:focus {
+    color: var(--clr-accent);
+    cursor: pointer;
+  }
+  summary::after {
+    content: url(./app/assets/images/icon-plus.svg);
+  }
+  details[open] summary::after {
+    content: url(./app/assets/images/icon-minus.svg);
+  }
+
+  p {
+    padding: 0 20px;
+    color: var(--gray);
+  }
+
+  @media screen and (max-width: 400px) {
+    .accordion {
+        width: 15rem;
+        padding: 10px;
+    }
+    footer {
+        font-size: 10px;
+    }
+  }

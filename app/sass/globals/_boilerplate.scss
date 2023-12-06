@@ -1,0 +1,57 @@
+
+  body {
+    background: var(--clr-pink)
+    url(./app/assets/images/background-pattern-desktop.svg) no-repeat;
+    background-size: contain;
+    font-family: var(--ff-main);
+    font-size:   var(--fs-main);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  main {
+    background-color: var(--clr-white);
+    border-radius: 0.5rem;
+    .title {
+      display: flex;
+      gap: 15px;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      span {
+        font-weight: var(--fw-bold);
+        font-size: 2rem;
+        color: var(--clr-purple);
+      }
+    }
+  }
+
+  /* footer styles */
+  footer {
+    margin-top: 20px;
+  }
+  .attribution {
+    // color: var(--white-00);
+    font-size: 1rem;
+    text-align: center;
+          
+    a {
+      color: hsla(130, 100%, 30%, 1);
+      text-decoration: none;
+    }
+    a:hover {
+      color: hsla(340, 100%, 50%, 1);
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    body {
+      background-image: url(../../assets/images/background-pattern-mobile.svg);
+    }
+  }
+ 
